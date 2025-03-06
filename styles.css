@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  width: 100%;
+}
+
+body {
+  background-color: hsl(0, 0%, 58%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 25rem;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "img" "content";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  color: hsl(235, 18%, 26%);
+}
+
+ul {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+li {
+  display: flex;
+  gap: 0.75rem;
+}
+
+li::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent url("./assets/images/icon-list.svg") no-repeat;
+}
+
+#header-img {
+  grid-area: img;
+  margin-bottom: 0.25rem;
+}
+
+#content {
+  grid-area: content;
+  display: grid;
+  padding: 1.5rem;
+}
+#content h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  transform: scale(1, 0.9);
+  letter-spacing: 0.05rem;
+}
+
+#form {
+  display: grid;
+}
+#form label {
+  color: hsl(234, 29%, 20%);
+  font-weight: bold;
+  font-size: 0.75rem;
+  transform: scale(1, 0.9);
+}
+#form input {
+  border: 1px solid hsl(0, 0%, 58%);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  transform: scale(1, 0.9);
+  margin-bottom: 0.5rem;
+}
+#form input::placeholder {
+  color: hsl(0, 0%, 58%);
+}
+#form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0px;
+  border-radius: 0.5rem;
+  padding: 1.825rem;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+  transform: scale(1, 0.9);
+  cursor: pointer;
+}
+
+#success {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    grid-template-areas: "content img";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

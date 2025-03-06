@@ -16,35 +16,40 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="main.js"></script>
   </head>
   <body>
     <main>
       <section id="sign-up">
         <!-- Sign-up form start -->
-        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
-        <h1>
-          Stay updated! Join 60,000+ product managers receiving monthly updates
-          on:
-        </h1>
+        <img
+          id="header-img"
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt=""
+        />
+        <div class="content" id="content">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <form id="form" novalidate>
-          <label for="email">Email address</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="email@company.com"
-          />
-          <span aria-live="polite" id="email-error"></span>
-        </form>
-        <button>Subscribe to monthly newsletter</button>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+
+          <form id="form" novalidate>
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="email@company.com"
+            />
+            <span aria-live="polite" id="email-error"></span>
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </div>
 
         <!-- Sign-up form end -->
       </section>
