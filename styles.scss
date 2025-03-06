@@ -209,6 +209,7 @@ button {
 
 @media screen and (min-width: 768px) {
   #sign-up {
+    display: none;
     grid-template-areas: 'content img';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -222,10 +223,16 @@ button {
       padding: 3rem;
       min-width: 29rem;
       font-size: 15px;
+      grid-area: content;
 
       #form {
         align-self: flex-start;
         gap: 0.5rem;
+      }
+
+      img {
+        grid-area: img;
+        padding: 1.5rem;
       }
 
       h1 {
@@ -238,12 +245,24 @@ button {
     }
   }
 
-  img {
-    grid-area: img;
-    padding: 1.5rem;
+  #success {
+    display: grid;
+    height: 31rem;
+    max-width: 29rem;
+    border-radius: 2rem;
+    padding: 3.5rem;
+    font-size: 15px;
+    // line-height: 1.25;
+
+    .success-content {
+      h1 {
+        font-size: 3.1rem;
+        letter-spacing: 0.1rem;
+      }
+    }
   }
 
-  #content {
-    grid-area: content;
+  button {
+    margin-top: 2rem;
   }
 }
