@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'),
+    url(./assets/fonts/Roboto-Regular.ttf) format('truetype'),
+    url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url(./assets/fonts/Roboto-Bold.ttf) format('truetype'),
+    url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  font-weight: bold;
+}
+
+$roboto: 'Roboto', sans-serif;
+$Red: hsl(4, 100%, 67%);
+$Blue-800: hsl(234, 29%, 20%);
+$Blue-700: hsl(235, 18%, 26%);
+$Grey: hsl(0, 0%, 58%);
+$White: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+// End Reset
