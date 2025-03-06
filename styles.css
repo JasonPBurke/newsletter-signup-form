@@ -34,7 +34,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: hsl(0, 0%, 100%);
 }
 
 a {
@@ -81,9 +81,6 @@ section {
   max-width: 25rem;
   height: 100vh;
   display: grid;
-  grid-template-areas: "img" "content";
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr;
   color: hsl(235, 18%, 26%);
 }
 
@@ -110,8 +107,8 @@ li::before {
 }
 
 #content {
-  grid-area: content;
   display: grid;
+  grid-area: content;
   padding: 1.5rem;
 }
 #content h1 {
@@ -141,7 +138,8 @@ li::before {
 #form input::placeholder {
   color: hsl(0, 0%, 58%);
 }
-#form button {
+
+button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,8 +153,39 @@ li::before {
   cursor: pointer;
 }
 
-#success {
+#sign-up {
   display: none;
+  grid-template-areas: "img" "content";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+#success {
+  display: grid;
+  grid-template-areas: "thanks" "dismiss";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.75fr;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1.5rem;
+  padding-block-end: 3rem;
+}
+#success img {
+  width: 4rem;
+  margin-block-end: 2rem;
+}
+#success .success-content {
+  grid-area: thanks;
+  color: hsl(234, 29%, 20%);
+}
+#success .success-content h1 {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin-block-end: 1.5rem;
+}
+#success .success-content p span {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {

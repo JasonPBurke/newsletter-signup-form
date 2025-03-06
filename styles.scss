@@ -43,7 +43,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: $White;
 }
 
 a {
@@ -91,9 +91,7 @@ section {
   max-width: 25rem;
   height: 100vh;
   display: grid;
-  grid-template-areas: 'img' 'content';
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr;
+
   color: $Blue-700;
 }
 
@@ -122,8 +120,8 @@ li::before {
 }
 
 #content {
-  grid-area: content;
   display: grid;
+  grid-area: content;
   padding: 1.5rem;
 
   h1 {
@@ -156,24 +154,61 @@ li::before {
       color: $Grey;
     }
   }
+}
 
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 0px;
-    border-radius: 0.5rem;
-    padding: 1.825rem;
-    background-color: $Blue-800;
-    color: $White;
-    font-weight: bold;
-    transform: scale(1, 0.9);
-    cursor: pointer;
-  }
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0px;
+  border-radius: 0.5rem;
+  padding: 1.825rem;
+  background-color: $Blue-800;
+  color: $White;
+  font-weight: bold;
+  transform: scale(1, 0.9);
+  cursor: pointer;
+}
+
+#sign-up {
+  display: none;
+  grid-template-areas: 'img' 'content';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
 }
 
 #success {
-  display: none;
+  display: grid;
+  grid-template-areas: 'thanks' 'dismiss';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.75fr;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1.5rem;
+  padding-block-end: 3rem;
+
+  img {
+    width: 4rem;
+    margin-block-end: 2rem;
+  }
+
+  .success-content {
+    grid-area: thanks;
+    color: $Blue-800;
+
+    h1 {
+      font-weight: 900;
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin-block-end: 1.5rem;
+    }
+
+    p {
+      span {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
