@@ -43,7 +43,6 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: $White;
 }
 
 a {
@@ -80,10 +79,11 @@ img {
 // End Reset
 
 body {
-  background-color: $Grey;
+  background-color: $Blue-700;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 section {
@@ -91,7 +91,6 @@ section {
   max-width: 25rem;
   height: 100vh;
   display: grid;
-
   color: $Blue-700;
 }
 
@@ -106,8 +105,6 @@ li {
 }
 
 li::before {
-  // display: inline-block;
-  // margin-right: 0.5rem;
   content: '';
   width: 1.5rem;
   height: 1.5rem;
@@ -146,8 +143,7 @@ li::before {
   input {
     border: 1px solid $Grey;
     border-radius: 0.5rem;
-    padding: 1rem 1.25rem;
-    transform: scale(1, 0.9);
+    padding: 1.19rem 1.25rem;
     margin-bottom: 0.5rem;
 
     &::placeholder {
@@ -162,7 +158,7 @@ button {
   align-items: center;
   line-height: 0px;
   border-radius: 0.5rem;
-  padding: 1.825rem;
+  padding: 2rem;
   background-color: $Blue-800;
   color: $White;
   font-weight: bold;
@@ -171,14 +167,14 @@ button {
 }
 
 #sign-up {
-  display: none;
+  display: grid;
   grid-template-areas: 'img' 'content';
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr;
 }
 
 #success {
-  display: grid;
+  display: none;
   grid-template-areas: 'thanks' 'dismiss';
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.75fr;
@@ -212,9 +208,40 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  section {
+  #sign-up {
     grid-template-areas: 'content img';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    max-block-size: 70vh;
+    max-inline-size: 80vw;
+    place-content: center;
+    border-radius: 2rem;
+
+    #content {
+      align-items: flex-end;
+      padding: 3rem;
+      min-width: 29rem;
+
+      #form {
+        align-self: flex-start;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+      }
+
+      ul {
+        gap: 0.75rem;
+      }
+    }
+  }
+
+  img {
+    grid-area: img;
+    padding: 1.5rem;
+  }
+
+  #content {
+    grid-area: content;
   }
 }
