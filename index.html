@@ -23,11 +23,18 @@
     <main>
       <section id="sign-up">
         <!-- Sign-up form start -->
-        <img
-          id="header-img"
-          src="assets/images/illustration-sign-up-mobile.svg"
-          alt=""
-        />
+
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img
+            id="header-img"
+            src="assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+          />
+        </picture>
         <div class="content" id="content">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
