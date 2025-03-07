@@ -6,6 +6,7 @@
 
 $roboto: 'Roboto', sans-serif;
 $Red: hsl(4, 100%, 67%);
+$Red-opaque: hsla(4, 100%, 67%, 0.508);
 $Blue-800: hsl(234, 29%, 20%);
 $Blue-700: hsl(235, 18%, 26%);
 $Grey: hsl(0, 0%, 58%);
@@ -149,6 +150,10 @@ li::before {
     &::placeholder {
       color: $Grey;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -159,11 +164,23 @@ button {
   line-height: 0px;
   border-radius: 0.5rem;
   padding: 2rem;
-  background-color: $Blue-800;
+  background-image: linear-gradient($Blue-800, $Blue-800);
   color: $White;
   font-weight: bold;
   transform: scale(1, 0.9);
   cursor: pointer;
+  // transition: background-image box-shadow 0.3s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: linear-gradient(
+      to right,
+      hsl(345, 90%, 65%),
+      hsl(15, 91%, 60%)
+    );
+    box-shadow: 0 10px 25px $Red-opaque;
+  }
 }
 
 #sign-up {
@@ -174,7 +191,7 @@ button {
 }
 
 #success {
-  display: none;
+  display: grid;
   grid-template-areas: 'thanks' 'dismiss';
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.75fr;
@@ -209,7 +226,7 @@ button {
 
 @media screen and (min-width: 768px) {
   #sign-up {
-    display: none;
+    display: grid;
     grid-template-areas: 'content img';
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -217,6 +234,7 @@ button {
     max-inline-size: 80vw;
     place-content: center;
     border-radius: 2rem;
+    box-shadow: 0 0 1.5rem 0.5rem $Blue-800;
 
     #content {
       align-items: flex-end;
@@ -247,12 +265,12 @@ button {
 
   #success {
     display: grid;
-    height: 31rem;
-    max-width: 29rem;
+    height: 32rem;
+    max-width: 29.4rem;
     border-radius: 2rem;
     padding: 3.5rem;
     font-size: 15px;
-    // line-height: 1.25;
+    box-shadow: 0 0 1.5rem 0.5rem $Blue-800;
 
     .success-content {
       h1 {

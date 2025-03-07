@@ -137,6 +137,9 @@ li::before {
 #form input::placeholder {
   color: hsl(0, 0%, 58%);
 }
+#form input:hover {
+  cursor: pointer;
+}
 
 button {
   display: flex;
@@ -145,11 +148,15 @@ button {
   line-height: 0px;
   border-radius: 0.5rem;
   padding: 2rem;
-  background-color: hsl(234, 29%, 20%);
+  background-image: linear-gradient(hsl(234, 29%, 20%), hsl(234, 29%, 20%));
   color: hsl(0, 0%, 100%);
   font-weight: bold;
   transform: scale(1, 0.9);
   cursor: pointer;
+}
+button:hover, button:active, button:focus {
+  background: linear-gradient(to right, hsl(345, 90%, 65%), hsl(15, 91%, 60%));
+  box-shadow: 0 10px 25px hsla(4, 100%, 67%, 0.508);
 }
 
 #sign-up {
@@ -160,7 +167,7 @@ button {
 }
 
 #success {
-  display: none;
+  display: grid;
   grid-template-areas: "thanks" "dismiss";
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.75fr;
@@ -189,7 +196,7 @@ button {
 
 @media screen and (min-width: 768px) {
   #sign-up {
-    display: none;
+    display: grid;
     grid-template-areas: "content img";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -197,6 +204,7 @@ button {
     max-inline-size: 80vw;
     place-content: center;
     border-radius: 2rem;
+    box-shadow: 0 0 1.5rem 0.5rem hsl(234, 29%, 20%);
   }
   #sign-up #content {
     align-items: flex-end;
@@ -221,11 +229,12 @@ button {
   }
   #success {
     display: grid;
-    height: 31rem;
-    max-width: 29rem;
+    height: 32rem;
+    max-width: 29.4rem;
     border-radius: 2rem;
     padding: 3.5rem;
     font-size: 15px;
+    box-shadow: 0 0 1.5rem 0.5rem hsl(234, 29%, 20%);
   }
   #success .success-content h1 {
     font-size: 3.1rem;
