@@ -228,9 +228,9 @@ button {
   #sign-up {
     display: grid;
     grid-template-areas: 'content img';
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.95fr 1fr;
     grid-template-rows: 1fr;
-    max-block-size: 75vh;
+    max-block-size: 83vh;
     max-inline-size: 80vw;
     place-content: center;
     border-radius: 2rem;
@@ -240,7 +240,7 @@ button {
       align-items: flex-end;
       padding: 3rem;
       min-width: 29rem;
-      font-size: 15px;
+      font-size: 16px;
       grid-area: content;
 
       #form {
@@ -254,7 +254,7 @@ button {
       }
 
       h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
 
       ul {
