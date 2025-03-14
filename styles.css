@@ -233,7 +233,7 @@ button:hover, button:active, button:focus {
     min-height: 100%;
   }
   picture img {
-    height: 92%;
+    height: 93%;
     object-fit: cover;
     border-radius: 1rem;
   }
@@ -249,9 +249,6 @@ button:hover, button:active, button:focus {
   #success .success-content h1 {
     font-size: 3.1rem;
     letter-spacing: 0.1rem;
-  }
-  button {
-    margin-top: 2rem;
   }
 }
 
