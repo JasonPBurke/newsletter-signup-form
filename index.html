@@ -17,7 +17,7 @@
     </title>
 
     <link rel="stylesheet" href="styles.css" />
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <main>
@@ -46,7 +46,10 @@
           </ul>
 
           <form id="form" novalidate>
-            <label for="email">Email address</label>
+            <div id="label-container">
+              <label id="label" for="email">Email address</label>
+              <span>Valid email required</span>
+            </div>
             <input
               id="email"
               type="email"
@@ -72,8 +75,8 @@
           <h1>Thanks for subscribing!</h1>
           <p>
             A confirmation email has been sent to
-            <span>ash@loremcompany.com</span>. Please open it and click the
-            button inside to confirm your subscription.
+            <span id="user-email">ash@loremcompany.com</span>. Please open it
+            and click the button inside to confirm your subscription.
           </p>
         </div>
         <button id="dismiss-btn">Dismiss message</button>
